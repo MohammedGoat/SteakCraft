@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+section {
+    margin-block-start: 50px;
+}
+body {
+    position: relative;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    block-size: 50px;
+    padding: 0 10%;
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    background-color: white; /* changement ici */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.menu {
+    display: flex;
+}
+.logo {
+    color: red; /* changement ici */
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo span {
+    color: #273e60;
+}
+.menu li {
+   margin: 0 15px;
+   list-style: none;
+}
+.menu li a {
+    font-size: 14px;
+    text-decoration: 0;
+    color: #999;
+    position: relative;
+}
+.menu li a::before {
+    position: absolute;
+    inset-block-start: -5px;
+    inset-inline-start: 0;
+    content: "";
+    inline-size: 0;
+    block-size: 2px;
+    border-radius: 6px;
+    background-color: red; /* changement ici */
+    transition: 0.5s;
+}
+.menu li a:hover::before {
+    inline-size: 100%;
+}
+.menu li a::after {
+    position: absolute;
+    inset-block-end: -5px;
+    inset-inline-end: 0;
+    content: "";
+    inline-size: 0;
+    block-size: 2px;
+    border-radius: 6px;
+    background-color: red; /* changement ici */
+    transition: 0.5s;
+}
+.menu li a:hover::after {
+    inline-size: 100%;
+}
+.menu li a:hover {
+    color: #000;
+}
+
+/* home CSS */
+#home {
+    margin-block-start: 50px;
+    display: flex;
+    align-items: center;
+    margin-inline-start: 10%;
+    margin-inline-end: 10%;
+    block-size: calc(100vh - 50px);
+    justify-content: space-between;
+}
+#home .left {
+    inline-size: 40%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#home .left h4 {
+    font-size: 20px;
+    color: red; /* changement ici */
+}
+#home .left h1 {
+    font-size: 40px;
+}
+#home .left p {
+    font-size: 12px;
+    color: #999;
+}
+#home .left button,td button {
+     margin-block-start: 20px;
+     inline-size: fit-content;
+     padding: 5px 10px;
+     background-color: #000;
+     border: 0;
+     transition: 0.5s;
+     position: relative;
+     cursor: pointer;
+}
+#home .left button  a,td button  a {
+    text-decoration: 0;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#home .left button::before,td button::before {
+    position: absolute;
+    inset-inline-start: 5px;
+    inset-block-start: 5px;
+    content: "";
+    block-size: 100%;
+    inline-size: 100%;
+    z-index: -1;
+    background-color: red; /* changement ici */
+}
+#home .left button:hover a{
+   letter-spacing: 1px;
+}
+
+#home .right {
+    inline-size: 50%;
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img {
+    inline-size: 100%;
+    animation: animate 2s linear;
+    transition: 0.5s;
+}
+
+/* animation image */
+
+@keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* menu CSS */
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.05);
+    padding: 50px 10px;
+}
+.mini_title {
+    margin-block-start: 25px;
+    font-size: 16px;
+    color: red; /* changement ici */
+    text-transform: capitalize;
+}
+.title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #273e60;
+    margin-block-end: 25px;
+    text-align: center;
+}
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 80%;
+    justify-content: space-around;
+}
+.dishes .dish {
+    block-size: 280px;
+    inline-size: 30%;
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-block-end: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.dishes .dish  img {
+    inline-size: 130px;
+    block-size: 120px;
+    margin-block-end: 15px;
+}
+.dishes .dish p {
+    text-align: center;
+    font-size: 18px;
+
+}
+.dishes .dish button{
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.dishes .dish button a {
+    margin-block-start: 10px;
+    font-size: 14px;
+    text-decoration: 0;
+    background-color: red; /* changement ici */
+    padding: 5px 60px;
+    color: #fff;
+    border-radius: 6px;
+}
+.dishes .dish a:hover{
+    background-color: black;
+}
+/*Scrollbar CSS*/
+::-webkit-scrollbar {
+    inline-size: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: red; /* changement ici */
+}
+.btn {
+    margin-block-start: 20px;
+    inline-size: fit-content;
+    padding: 5px 10px;
+    background-color: #000;
+    border: 0;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+.btn a {
+   text-decoration: 0;
+   color: #fff;
+   font-weight: bold;
+   text-transform: uppercase;
+   transition: 0.5s;
+}
+.btn::before {
+   position: absolute;
+   inset-inline-start: 5px;
+   inset-block-start: 5px;
+   content: "";
+   block-size: 100%;
+   inline-size: 100%;
+   z-index: -1;
+   background-color: red; /* changement ici */
+}
+/* about us CSS */
+
+#about_us {
+    display: flex;
+    align-items: center;
+    block-size: calc(100vh - 50px);
+    flex-direction: column;
+    padding: 50px 10%;
+    inline-size: 100%;
+}
+.about {
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    justify-content: space-between;
+    block-size: 70vh;
+}
+.about .left {
+     inline-size: 40%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     block-size: 100vh;
+}
+.about .left img {
+    inline-size: 90%;
+}
+.about .right {
+    inline-size: 60%;
+}
+.about .right h3 {
+    font-size:35px;
+    color: #273e60;
+    margin: 10px 0;
+}
+.about .right p {
+    font-size: 14px ;
+    color: #999;
+}
+.about .right button,td button {
+    margin: 20px 0;
+    padding: 5px 60px;
+    background-color: black; /* changement ici */
+    border: 0;
+}
+.about .right button a,td button a{
+    color: #fff;
+    text-decoration: 0;
+    font-weight: bolder;
+}
+
+
+/* comment section CSS */
+
+.comment_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    block-size: calc(100vh - 50px);
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.comments {
+    display: flex;
+    justify-content: space-around;
+    inline-size: 100%;
+    flex-wrap: wrap;
+}
+.comments  .comment div {
+   display: flex;
+   align-items: center;
+   margin-block-end: 10px;
+}
+.comments  .comment div img {
+   inline-size: 45px;
+   block-size: 45px;
+   border: 2px solid red; /* changement ici */
+   border-radius: 50%;
+}
+.comments  .comment {
+    inline-size: 30%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+}
+.comments  .comment div h4 {
+    margin-inline-start: 15px;
+    font-size: 14px;
+    color: #273e60;
+}
+.comments  .comment p {
+    font-size: 13px;
+    color: #999;
+}
+/* reservation CSS */
+
+#reservation {
+    margin-block-start: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    block-size: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4 )) , url(reservation.jpg);
+    background-size: cover;
+}
+#reservation form {
+    display: flex;
+    background-color: rgba(0,0,0,0.05);
+    padding: 25px;
+    border-radius: 6px;
+    flex-direction: column;
+    inline-size: 350px;
+}
+#reservation form  label {
+    margin-block-end: 8px;
+    font-size: 14px;
+}
+#reservation form input {
+    margin-block-end: 10px;
+   padding: 5px;
+   border: 1px solid transparent;
+   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+   outline: 0;
+}
+#reservation form input:focus {
+    outline: 1px solid red; /* changement ici */
+}
+#reservation form input[type="submit"]{
+    margin-block-start: 15px;
+    color: #fff;
+    background-color: red; /* changement ici */
+    border: 1px solid red; /* changement ici */
+}
+
+/* footer CSS */
+
+footer {
+    background-color: rgba(0,0,0,0.05);
+}
+footer .services_list {
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service img {
+    inline-size: 40px;
+    background-color: red; /* changement ici */
+    padding: 10px;
+    border-radius: 50%;
+    margin-block-end: 10px;
+
+}
+.service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px auto;
+}
+.service  p {
+    color: #333;
+}
+hr {
+    background-color: #ccc;
+    border: 0;
+    block-size: 2px;
+    inline-size: 100%;
+}
+.footer_text {
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 0;
+}
+.footer_text span {
+    color: red; /* changement ici */
+}
+.toggle_menu {
+    display: none;
+}
+/* Responsive */
+@media (max-inline-size:964px) {
+    header .menu {
+        display: none;
+    }
+    header {
+        padding: 0 20px;
+    }
+    #home {
+        flex-direction: column;
+        padding: 12px;
+        block-size: fit-content;
+
+    }
+    #home .left , #home .right  {
+        inline-size: 100%;
+        padding: 0;
+    }
+    #home .left {
+        margin: 100px 0;
+    }
+    #home .left h1 {
+        font-size: 20px;
+        margin-block-end: 15px;
+    }
+    #home .left h4 {
+        font-size: 15px;
+    }
+    #home .left p {
+        font-size: 15px;
+    }
+    #menu .dishes .dish {
+        inline-size: 100%;
+        max-inline-size: 260px;
+    }
+    #about_us {
+        padding: 10px ;
+        block-size: auto;
+    }
+    #about_us .about {
+        flex-direction: column;
+       block-size: fit-content;
+    }
+    #about_us .left , #about_us .right {
+        inline-size: 100%;
+    }
+    #about_us .left {
+        block-size: fit-content;
+    }
+    #about_us .left img {
+        inline-size: 50%;
+    }
+    #about_us .right {
+        text-align: center;
+        padding: 20px;
+    }
+    .comment_section {
+        block-size: auto;
+    }
+    .comment_section .comments  .comment{
+        inline-size: 100%;
+        margin-block-start: 20px;
+    }
+    .services_list .service {
+        padding: 0 50px;
+    }
+    .toggle_menu {
+        display: flex;
+        block-size: 40px;
+        inline-size: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         cursor: pointer;
+    }
+    .toggle_menu::before {
+        position: absolute;
+        content: "";
+        block-size: 3px;
+        inline-size: 28px;
+        background-color: red; /* changement ici */
+        border-radius: 6px;
+        box-shadow: 0 10px 0 red; /* changement ici */
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::before {
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 red; /* changement ici */
+    }
+    .toggle_menu::after {
+        position: absolute;
+        content: "";
+        block-size: 3px;
+        inline-size: 28px;
+        background-color: red; /* changement ici */
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+      
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        inset-block-start: 50px;
+        inset-inline-start: 0;
+        inline-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        flex-direction: column;
+    }
+    header .menu.responsive li {
+        margin: 15px 0;
+    }
+
+}
+.contact1{
+    background-color: rgb(222, 222, 222);
+    padding: 20px;
+
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap:3rem;
+}
+.contact-info h4{
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info p:hover{
+    color: #EE1C47;
+}
+.social-icon i{
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;    
+}
+.social-icon i:hover{
+    transform: scale(1.3);
+}
+.cart{
+    width: 80%;
+}
+.cart thead th{
+    font-size: 17px;
+    font-weight: 500;
+    background: #EE1C47;
+    height: 45px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.cart tr td{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    border-bottom: #5a5656 solid 1px;
+}
+.cart tr .continu_shopping{
+border: none;
+font-size: 17px;
+font-weight: 700;
+color: #273e60;
+}
+.orders{
+    width: 84%;
+}
+.orders thead th{
+    font-size: 14px;
+    font-weight: 450;
+    background: #EE1C47;
+    height: 45px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.orders tr td{
+    padding: 7px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    border-bottom: #5a5656 solid 1px;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
